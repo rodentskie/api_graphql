@@ -20,11 +20,14 @@
   },
   "homepage": "https://github.com/rodentskie/api_graphql#readme",
   "dependencies": {
-    "apollo-server-express": "^2.25.1",
+    "apollo-server-koa": "^3.0.2",
     "class-validator": "^0.13.1",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "graphql": "^15.5.0",
+    "i": "^0.3.6",
+    "koa": "^2.13.1",
+    "npm": "^7.20.1",
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.4",
     "reflect-metadata": "^0.1.13",
@@ -33,7 +36,7 @@
     "type-graphql": "^1.1.1"
   },
   "devDependencies": {
-    "@types/express": "^4.17.12",
+    "@types/koa": "^2.13.4",
     "@types/node": "^15.12.2",
     "@types/pg": "^8.6.0",
     "nodemon": "^2.0.7",
