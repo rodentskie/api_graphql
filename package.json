@@ -24,13 +24,10 @@
     "dotenv": "^10.0.0",
     "graphql": "^15.5.0",
     "koa": "^2.13.1",
-    "npm": "^7.20.1",
-    "pg": "^8.6.0",
-    "pg-hstore": "^2.3.4",
+    "mongodb": "^4.0.1",
     "reflect-metadata": "^0.1.13",
-    "sequelize": "^6.6.2",
-    "sequelize-cli": "^6.2.0",
-    "type-graphql": "^1.1.1"
+    "type-graphql": "^1.1.1",
+    "typeorm": "^0.2.34"
   },
   "devDependencies": {
     "@types/koa": "^2.13.4",
