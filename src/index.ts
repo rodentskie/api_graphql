@@ -1,9 +1,7 @@
 import 'reflect-metadata';
-import express from 'express';
 import { ApolloServer } from 'apollo-server-koa';
 import { buildSchema } from 'type-graphql';
 import { HelloWorldResolver } from './resolvers/HelloWorldResolver';
-import { UserResolver } from './resolvers/User';
 import dotenv from 'dotenv';
 import Koa from 'koa';
 dotenv.config();
@@ -13,7 +11,7 @@ dotenv.config();
 
     const apolloServer = new ApolloServer({
         schema: await buildSchema({
-            resolvers: [HelloWorldResolver, UserResolver]
+            resolvers: [HelloWorldResolver]
         }),
         context: ({ req, res }) => ({ req, res })
     });
