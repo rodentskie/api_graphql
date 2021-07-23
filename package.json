@@ -21,6 +21,7 @@
   "homepage": "https://github.com/rodentskie/api_graphql#readme",
   "dependencies": {
     "apollo-server-koa": "^3.0.2",
+    "class-validator": "^0.13.1",
     "dotenv": "^10.0.0",
     "graphql": "^15.5.0",
     "koa": "^2.13.1",
