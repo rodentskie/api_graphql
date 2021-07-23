@@ -1,5 +1,4 @@
 import 'reflect-metadata';
-import express from 'express';
 import { ApolloServer } from 'apollo-server-koa';
 import { buildSchema } from 'type-graphql';
 import { HelloWorldResolver } from './resolvers/HelloWorldResolver';
