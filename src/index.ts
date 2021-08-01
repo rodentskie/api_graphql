@@ -1,6 +1,5 @@
 import 'reflect-metadata';
 import { ApolloServer } from 'apollo-server-koa';
-import { createConnection } from 'typeorm';
 import { buildSchema } from 'type-graphql';
 import { HelloWorldResolver } from './resolvers/HelloWorldResolver';
 import { Hobbies } from './resolvers/Hobby';
@@ -10,7 +9,6 @@ dotenv.config();
 
 (async () => {
     const app = new Koa();
-    await createConnection();
     const apolloServer = new ApolloServer({
         schema: await buildSchema({
             resolvers: [HelloWorldResolver, Hobbies]
@@ -23,7 +21,7 @@ dotenv.config();
     const port = process.env.PORT || 5000;
 
     app.listen(port, () => {
-        console.log(`🚀 Server ready at http://localhost:${port}${apolloServer.graphqlPath}`);
+        console.log(`🚀⚙️  Server ready at http://localhost:${port}${apolloServer.graphqlPath}`);
     });
 
     return { apolloServer, app };
