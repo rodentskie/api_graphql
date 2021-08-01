@@ -6,9 +6,11 @@ To use:
 
     * npm install
         - to install dependencies
-    * npx sequelize db:migrate
+    * npx sequelize-cli db:create
+        - to create the database
+    * npx sequelize-cli db:migrate
         - to generate database schema
-    * npx sequelize db:seed:all
+    * npx sequelize-cli db:seed:all
         - optional
         - to insert first data to database
     * npm run build
