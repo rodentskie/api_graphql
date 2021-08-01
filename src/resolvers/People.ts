@@ -184,7 +184,7 @@ export class PeopleResolver {
     }
 
     // patch hobby to person
-    @Mutation(() => Boolean)
+    @Mutation(() => PersonWithHobby)
     async patchPersonHobby(@Arg('id', () => String) id: String, @Arg('options', () => PersonHobby) options: PersonHobby) {
         const db = await conn(); // create connection
         const hobbies = options.hobbies; // get hobbies
@@ -201,7 +201,10 @@ export class PeopleResolver {
         });
         console.log(result);
         await db.connection.close(); // close connection
-        return true;
+
+        // select the person and hobby
+        const data = this.selectOnePersonWithHobby(id);
+        return data;
     }
 
     // select one person with hobby
