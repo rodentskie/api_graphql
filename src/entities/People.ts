@@ -1,19 +1,22 @@
 import { Field, Int, ObjectType } from 'type-graphql';
-import { Entity, ObjectID, ObjectIdColumn, Column } from 'typeorm';
 
 @ObjectType()
-@Entity()
 export class People {
-    @ObjectIdColumn()
-    id!: ObjectID;
+    @Field()
+    _id?: string;
 
-    @Column()
+    @Field()
     firstName!: string;
 
-    @Column()
+    @Field()
     lastName!: string;
 
     @Field(() => Int)
-    @Column('int')
     age!: number;
+
+    @Field()
+    createdAt?: Date;
+
+    @Field()
+    updatedAt?: Date;
 }

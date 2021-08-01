@@ -1,4 +1,4 @@
-import { Arg, Field, InputType, Int, Mutation, Query, Resolver } from 'type-graphql';
+import { Arg, Field, InputType, Mutation, Query, Resolver } from 'type-graphql';
 import { Hobby } from '../entities/Hobby'; // entity
 import HobbyModel from '../models/Hobby'; // model
 import conn from '../data/index';

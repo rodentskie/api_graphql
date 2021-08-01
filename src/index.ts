@@ -3,6 +3,7 @@ import { ApolloServer } from 'apollo-server-koa';
 import { buildSchema } from 'type-graphql';
 import { HelloWorldResolver } from './resolvers/HelloWorldResolver';
 import { Hobbies } from './resolvers/Hobby';
+import { PeopleResolver } from './resolvers/People';
 import dotenv from 'dotenv';
 import Koa from 'koa';
 dotenv.config();
@@ -11,7 +12,7 @@ dotenv.config();
     const app = new Koa();
     const apolloServer = new ApolloServer({
         schema: await buildSchema({
-            resolvers: [HelloWorldResolver, Hobbies]
+            resolvers: [HelloWorldResolver, Hobbies, PeopleResolver]
         }),
         context: ({ req, res }) => ({ req, res })
     });
