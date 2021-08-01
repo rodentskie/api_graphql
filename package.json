@@ -20,19 +20,17 @@
   },
   "homepage": "https://github.com/rodentskie/api_graphql#readme",
   "dependencies": {
-    "@types/dotenv": "^8.2.0",
-    "@types/mongodb": "^4.0.7",
     "apollo-server-koa": "^3.0.2",
     "class-validator": "^0.13.1",
     "dotenv": "^10.0.0",
     "graphql": "^15.5.0",
     "koa": "^2.13.1",
-    "mongodb": "^4.0.1",
     "mongoose": "^5.13.5",
     "reflect-metadata": "^0.1.13",
     "type-graphql": "^1.1.1"
   },
   "devDependencies": {
+    "@types/dotenv": "^8.2.0",
     "@types/koa": "^2.13.4",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^15.12.2",
